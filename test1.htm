@@ -9,8 +9,8 @@
 <script type="text/javascript">
 (function($){
 	$(document).ready(function(){
-		var regx = '';
 		$('input').each(function(i1,v1){
+		    var regx = '';
 		    var at = $(v1).attr('input');
 		    if (typeof at !== typeof undefined && at !== false) {
 			var types = $(v1).attr('input').split('-');
@@ -21,6 +21,12 @@
                             break;
                         case 'ENGLISH':
                             regx += 'a-zA-Z';
+                            break;
+                        case 'AT':
+                            regx += '@';
+                            break;
+                        case 'DOT':
+                            regx += '.';
                             break;
                         case 'FARSI':
                         case 'PERSIAN':
